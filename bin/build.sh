@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+$(aws ecr get-login --no-include-email --region eu-west-2)
 for docker in $(find ./ -name Dockerfile); do
   name=$(dirname $docker)
   echo ${name#./}
