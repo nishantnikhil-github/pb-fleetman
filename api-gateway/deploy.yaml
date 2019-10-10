@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
       - name: api-gateway
-        image: api-gateway
+        image: 090107652998.dkr.ecr.eu-west-2.amazonaws.com/api-gateway:latest
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
         # Using this as a way to avoid having to bother pushing images to registry.
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         readinessProbe:
           httpGet:
             path: /
