@@ -4,7 +4,7 @@ build:
 	./bin/build.sh
 
 deploy:
-	find ./ -name deploy.yaml | xargs -n1 docker run -v $$PWD:/work -w /work -v /usr/bin/aws-iam-authenticator:/usr/bin/aws-iam-authenticator -v /root/.kube/config:/config --rm --name kubectl bitnami/kubectl:latest --kubeconfig /config -f apply
+	find ./ -name deploy.yaml | xargs -n1 docker run -v $$PWD:/work -w /work -v /usr/bin/aws-iam-authenticator:/usr/bin/aws-iam-authenticator -v /root/.kube/config:/config --rm --name kubectl bitnami/kubectl:latest --kubeconfig /config apply -f
 	
 
 proxy:
