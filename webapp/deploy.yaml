@@ -17,8 +17,8 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
-        image: webapp
-        imagePullPolicy: Never
+        image: 090107652998.dkr.ecr.eu-west-2.amazonaws.com/webapp:latest
+        imagePullPolicy: Always
         readinessProbe:
           httpGet:
             path: /
