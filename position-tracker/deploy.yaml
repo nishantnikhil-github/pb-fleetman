@@ -14,11 +14,11 @@ spec:
     spec:
       containers:
       - name: position-tracker
-        image: position-tracker
+        image: 090107652998.dkr.ecr.eu-west-2.amazonaws.com/position-tracker:latest
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         readinessProbe:
           httpGet:
             path: /healthz
