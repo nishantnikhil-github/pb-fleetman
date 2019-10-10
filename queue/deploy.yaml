@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: queue
-        image: queue
-        imagePullPolicy: Never
+        image: 090107652998.dkr.ecr.eu-west-2.amazonaws.com/queue:latest
+        imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
