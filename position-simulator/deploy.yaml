@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
       - name: position-simulator
-        image: position-simulator
+        image: 090107652998.dkr.ecr.eu-west-2.amazonaws.com/position-simulator:latest
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
-        imagePullPolicy: Never
+        imagePullPolicy: Always
 ---
 # No service for this microservice - it's "headless", it just sends out data and nothing calls it.
